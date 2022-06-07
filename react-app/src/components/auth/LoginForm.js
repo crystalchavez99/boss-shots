@@ -38,7 +38,7 @@ const LoginForm = () => {
   }
 
   return (
-    <div id="login">
+    <div id="login" className='auth'>
       <form onSubmit={onLogin} className="form-login">
         <img src={logo}/>
         <h1>Log in to Boss-Shots</h1>

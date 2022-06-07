@@ -43,11 +43,11 @@ const SignUpForm = () => {
   }
 
   return (
-    <div id="signup">
+    <div id="signup" className='auth'>
       <form onSubmit={onSignUp} className="form-signup">
         <img src={logo}/>
         <h1>Sign Up For Boss-Shots</h1>
-      <div>
+      <div id="errors">
         {errors.map((error, ind) => (
           <div key={ind}>{error}</div>
         ))}
@@ -89,12 +89,10 @@ const SignUpForm = () => {
           name='repeat_password'
           onChange={updateRepeatPassword}
           value={repeatPassword}
-          required={true}
           placeholder="Repeat Password"
         ></input>
       </div>
       <button className="signup-btn" type='submit'>Sign Up</button>
-      <hr/>
       <p>Already a Boss-Shot Member? <a href="/login">Log In Here.</a></p>
     </form>
 
