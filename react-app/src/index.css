@@ -8,13 +8,13 @@ button.btn-rnb {
     background-image: linear-gradient(90deg, #3a778c 0%, #756726 49%, #4c1212 80%, #06181e 100%);
 }
 
-button {
+/* button {
     color: rgb(139, 149, 188);
     border-radius: 7px;
     background-color: rgb(24, 58, 24);
     border: 1px solid silver;
 
-}
+} */
 
 /* button:hover {
     color: rgb(9, 9, 10);
@@ -40,9 +40,10 @@ button {
 
 body {
     color: white;
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    background-color: rgb(33, 33, 36);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-bottom: 100px;
+    margin:0;
+    padding: 0;
 }
 
 .footer {

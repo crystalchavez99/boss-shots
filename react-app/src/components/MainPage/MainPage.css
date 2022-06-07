@@ -3,17 +3,17 @@
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-areas:
     'main main main myphotos'
-    'main main main myalbums'
+    'main main main myalbums';
+    color: rgb(33, 33, 36);
 }
 
 .photo-feed {
   grid-area: main;
   display: flex;
   flex-wrap: wrap;
-
   justify-content: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background: linear-gradient(-45deg, #8a8280, #161516, #6d7072, #1a1c1c);
+  background-color: rgb(243, 245, 246);
   background-size: 400% 400%;
   animation: mainpage 15s ease infinite;
 }
@@ -63,7 +63,7 @@
   margin-left: 5px;
 
   box-shadow: rgba(0, 0, 1px, 0.24) 0px 3px 8px;
-  background: linear-gradient(-45deg, #8a8280, #161516, #6d7072, #1a1c1c);
+  background-color: rgb(243, 245, 246);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 
@@ -94,7 +94,6 @@
   margin-left: 5px;
   /* justify-content: center; */
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background: linear-gradient(-45deg, #8a8280, #161516, #6d7072, #1a1c1c);
-  background-size: 400% 400%;
+  background-color: rgb(243, 245, 246);  background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }
