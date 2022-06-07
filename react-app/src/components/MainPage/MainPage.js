@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAllPhotosThunk } from '../../store/photos';
@@ -27,8 +27,9 @@ function MainPage() {
         <div className="photo-feed">
           <ul className="feed-ul">
             {photos?.map(photo => (
-              <NavLink key={photo.id} to={`/photos/${photo.id}`} className="photo-display-main"> <li >
-                <img src={photo.photo_url} className="photo-source" alt={photo.title} />
+              <NavLink key={photo.id} to={`/photos/${photo.id}`} className="photo-display-main">
+              <li className='photo'>
+                <img src={photo.photo_url} className="photo-source" alt={photo.title}/>
               </li>
               </NavLink>
             ))}

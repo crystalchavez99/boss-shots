@@ -12,8 +12,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background-color: rgb(243, 245, 246);
+
   background-size: 400% 400%;
   animation: mainpage 15s ease infinite;
 }
@@ -46,7 +45,11 @@
   object-fit: cover;
   margin: 10px;
 }
-
+.photo{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(243, 245, 246);
+  margin: 1rem;
+}
 .photo-display-main:hover {
   box-shadow: #f2f3f4 1px 2px 9px 0px;
 
