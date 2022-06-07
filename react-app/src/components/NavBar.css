@@ -23,7 +23,7 @@ nav{
 
 }
 
-#signup-navLink{
+#signup-navLink, button.logout-btn{
     text-decoration: none;
     background-color: white;
     width: min-content;
@@ -32,7 +32,7 @@ nav{
     color:rgb(0, 0, 0);
     border-radius: 3px;
 }
-#signup-navLink:hover{
+#signup-navLink:hover,button.logout-btn:hover{
     opacity: 1;
     color: rgba(0,0,0,.5);
 }

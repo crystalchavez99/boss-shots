@@ -35,7 +35,7 @@ const NavBar = () => {
 
         {sessionUser &&
           <li>
-            <LogoutButton />
+            <LogoutButton className="logout-btn" />
           </li>}
       </ul>
     </nav>
