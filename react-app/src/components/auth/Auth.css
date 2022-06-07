@@ -1,4 +1,4 @@
-#signup{
+#signup, #login{
     display: flex;
     justify-content: center;
 }
@@ -6,10 +6,16 @@
 .form-login {
 
     display: flex;
+    background-color: white;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 500px
+    text-align: center;
+    width: 350px;
+    height: 500px;
+    padding: 20px;
+    color:gray;
+    border-radius: 5px;
 }
 
 .form-signup{
@@ -46,6 +52,10 @@
     padding: 0;
 }
 
+.form-signup a{
+    text-decoration: none;
+    color:rgb(0, 109, 172);
+}
 .email-label-login {
     margin-right: 38px;
 }

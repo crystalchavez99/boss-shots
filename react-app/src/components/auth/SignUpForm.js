@@ -90,11 +90,14 @@ const SignUpForm = () => {
           onChange={updateRepeatPassword}
           value={repeatPassword}
           required={true}
-          placeholder="Password"
+          placeholder="Repeat Password"
         ></input>
       </div>
       <button className="signup-btn" type='submit'>Sign Up</button>
+      <hr/>
+      <p>Already a Boss-Shot Member? <a href="/login">Log In Here.</a></p>
     </form>
+
     </div>
   );
 };

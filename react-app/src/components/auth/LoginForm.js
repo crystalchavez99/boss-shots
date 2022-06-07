@@ -38,38 +38,40 @@ const LoginForm = () => {
   }
 
   return (
-    <form onSubmit={onLogin} className="form-login">
-      <div>
-        {errors.map((error, ind) => (
-          <div key={ind}>{error}</div>
-        ))}
-      </div>
-      <div className="email-div">
-        <label className="email-label-login" htmlFor='email'>Email</label>
-        <input
-          name='email'
-          type='text'
-          placeholder='Email'
-          value={email}
-          onChange={updateEmail}
-        />
-      </div>
-      <div className="password-div">
-        <label className="password-label" htmlFor='password'>Password</label>
-        <input
-          name='password'
-          type='password'
-          placeholder='Password'
-          value={password}
-          onChange={updatePassword}
-        />
+    <div id="login">
+      <form onSubmit={onLogin} className="form-login">
+        <div>
+          {errors.map((error, ind) => (
+            <div key={ind}>{error}</div>
+          ))}
+        </div>
+        <div className="email-div">
+          <label className="email-label-login" htmlFor='email'>Email</label>
+          <input
+            name='email'
+            type='text'
+            placeholder='Email'
+            value={email}
+            onChange={updateEmail}
+          />
+        </div>
+        <div className="password-div">
+          <label className="password-label" htmlFor='password'>Password</label>
+          <input
+            name='password'
+            type='password'
+            placeholder='Password'
+            value={password}
+            onChange={updatePassword}
+          />
 
-      </div>
-      <div className="login-demo-btn">
-        <button className="btn-rnb login-btn" type='submit'>Login</button>
-        <button className="btn-demo" onClick={demoUser}>Demo</button>
-      </div>
-    </form>
+        </div>
+        <div className="login-demo-btn">
+          <button className="btn-rnb login-btn" type='submit'>Login</button>
+          <button className="btn-demo" onClick={demoUser}>Demo</button>
+        </div>
+      </form>
+    </div>
   );
 };
 
