@@ -19,11 +19,22 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 400px;
+    width: 350px;
     height: 500px;
     padding: 20px;
     color:gray;
+    border-radius: 5px;
 
+}
+
+.form-signup input{
+    border-radius: 5px;
+    line-height: 20px;
+    border-color: rgb(137, 137, 137);
+    margin: 0;
+    border-width: 1px;
+    height: 55px;
+    padding: 0;
 }
 
 .email-label-login {
