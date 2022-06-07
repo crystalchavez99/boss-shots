@@ -1,3 +1,8 @@
+#signup{
+    display: flex;
+    justify-content: center;
+}
+
 .form-login {
 
     display: flex;
@@ -5,6 +10,20 @@
     align-items: center;
     justify-content: center;
     height: 500px
+}
+
+.form-signup{
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    color:gray;
+
 }
 
 .email-label-login {
@@ -49,4 +68,17 @@
 
 .email-label-signup {
     margin-right: 100px;
+}
+
+.signup-btn{
+    background-color: rgb(18, 143, 220);
+    color:rgb(255, 255, 255);
+    border-radius: 5px;
+    min-height: 40px;
+    font-weight: 700;
+    padding: 10px 25px;
+}
+.signup-btn:hover{
+    opacity: 1;
+    color: rgba(0,0,0,.5);
 }

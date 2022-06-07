@@ -26,6 +26,10 @@
     color:rgb(0, 0, 0);
     border-radius: 3px;
 }
+#signup-navLink:hover{
+    opacity: 1;
+    color: rgba(0,0,0,.5);
+}
 #login-nav-link {}
 
 #login-nav-link:hover {}

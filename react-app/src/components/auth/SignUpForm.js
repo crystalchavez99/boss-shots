@@ -43,7 +43,8 @@ const SignUpForm = () => {
   }
 
   return (
-    <form onSubmit={onSignUp} className="form-login">
+    <div id="signup">
+      <form onSubmit={onSignUp} className="form-signup">
       <div>
         {errors.map((error, ind) => (
           <div key={ind}>{error}</div>
@@ -56,6 +57,7 @@ const SignUpForm = () => {
           name='username'
           onChange={updateUsername}
           value={username}
+          placeholder="User Name"
         ></input>
       </div>
       <div className="email-div">
@@ -65,6 +67,7 @@ const SignUpForm = () => {
           name='email'
           onChange={updateEmail}
           value={email}
+          placeholder="Email"
         ></input>
       </div>
       <div className="password-div">
@@ -74,6 +77,7 @@ const SignUpForm = () => {
           name='password'
           onChange={updatePassword}
           value={password}
+          placeholder="Password"
         ></input>
       </div>
       <div className="email-div">
@@ -84,10 +88,12 @@ const SignUpForm = () => {
           onChange={updateRepeatPassword}
           value={repeatPassword}
           required={true}
+          placeholder="Password"
         ></input>
       </div>
-      <button className="btn-rnb" type='submit'>Sign Up</button>
+      <button className="signup-btn" type='submit'>Sign Up</button>
     </form>
+    </div>
   );
 };
 
