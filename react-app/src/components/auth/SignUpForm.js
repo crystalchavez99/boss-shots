@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { Redirect } from 'react-router-dom';
 import { signUp } from '../../store/session';
-
+import logo from '../../assets/boss-shots.png'
 const SignUpForm = () => {
   const [errors, setErrors] = useState([]);
   const [username, setUsername] = useState('');
@@ -45,6 +45,8 @@ const SignUpForm = () => {
   return (
     <div id="signup">
       <form onSubmit={onSignUp} className="form-signup">
+        <img src={logo}/>
+        <h1>Sign Up For Boss-Shots</h1>
       <div>
         {errors.map((error, ind) => (
           <div key={ind}>{error}</div>

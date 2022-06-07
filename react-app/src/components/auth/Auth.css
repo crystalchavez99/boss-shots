@@ -27,9 +27,18 @@
 
 }
 
+.form-signup h1{
+    font-size: larger;
+}
+.form-signup img{
+    width: 100px;
+    height: 100px;
+}
+
 .form-signup input{
     border-radius: 5px;
     line-height: 20px;
+    text-indent: 10px;
     border-color: rgb(137, 137, 137);
     margin: 0;
     border-width: 1px;
