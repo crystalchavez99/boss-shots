@@ -33,10 +33,10 @@
 
 }
 
-.form-signup h1{
+.form-signup h1, .form-login h1{
     font-size: larger;
 }
-.form-signup img{
+.form-signup img,.form-login img{
     width: 100px;
     height: 100px;
 }
@@ -52,7 +52,7 @@
     padding: 0;
 }
 
-.form-signup a{
+.form-signup a, .form-login a{
     text-decoration: none;
     color:rgb(0, 109, 172);
 }

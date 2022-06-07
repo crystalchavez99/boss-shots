@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { login } from '../../store/session';
 import "./Auth.css"
-
+import logo from '../../assets/boss-shots.png'
 const LoginForm = () => {
   const [errors, setErrors] = useState([]);
   const [email, setEmail] = useState('');
@@ -40,6 +40,8 @@ const LoginForm = () => {
   return (
     <div id="login">
       <form onSubmit={onLogin} className="form-login">
+        <img src={logo}/>
+        <h1>Log in to Boss-Shots</h1>
         <div>
           {errors.map((error, ind) => (
             <div key={ind}>{error}</div>
@@ -70,6 +72,7 @@ const LoginForm = () => {
           <button className="btn-rnb login-btn" type='submit'>Login</button>
           <button className="btn-demo" onClick={demoUser}>Demo</button>
         </div>
+        <p>Not a Boss-Shot Member? <a href="/sign-up">Sign up Here.</a></p>
       </form>
     </div>
   );
