@@ -12,7 +12,7 @@
     justify-content: center;
     text-align: center;
     width: 350px;
-    height: 500px;
+    height: 425px;
     padding: 20px;
     color:gray;
     border-radius: 5px;
@@ -41,7 +41,7 @@
     height: 100px;
 }
 
-.form-signup input{
+.form-signup input, .form-login input{
     border-radius: 5px;
     line-height: 20px;
     text-indent: 10px;
@@ -72,13 +72,7 @@
     margin-bottom: 10px;
 }
 
-.btn-demo {
-    margin-left: 20px;
-}
 
-.login-btn {
-    margin-left: 30px;
-}
 
 .rereet-password-label {
     margin-right: 9px;
@@ -100,7 +94,7 @@
     margin-right: 100px;
 }
 
-.signup-btn{
+.signup-btn,.login-btn{
     background-color: rgb(18, 143, 220);
     color:rgb(255, 255, 255);
     border-radius: 5px;
@@ -108,7 +102,20 @@
     font-weight: 700;
     padding: 10px 25px;
 }
-.signup-btn:hover{
+.signup-btn:hover,.login-btn:hover,.demo-btn:hover{
     opacity: 1;
     color: rgba(0,0,0,.5);
+}
+.demo-btn{
+    background-color:rgb(255, 255, 255);
+    color:rgb(18, 143, 220);
+    border-radius: 5px;
+    min-height: 40px;
+    font-weight: 700;
+    padding: 10px 25px;
+}
+
+#errors{
+    color:red;
+    padding-bottom: 5px;
 }

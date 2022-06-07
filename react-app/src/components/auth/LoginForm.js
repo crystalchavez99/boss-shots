@@ -42,13 +42,13 @@ const LoginForm = () => {
       <form onSubmit={onLogin} className="form-login">
         <img src={logo}/>
         <h1>Log in to Boss-Shots</h1>
-        <div>
+        <div id="errors">
           {errors.map((error, ind) => (
             <div key={ind}>{error}</div>
           ))}
         </div>
         <div className="email-div">
-          <label className="email-label-login" htmlFor='email'>Email</label>
+          {/* <label className="email-label-login" htmlFor='email'>Email</label> */}
           <input
             name='email'
             type='text'
@@ -58,7 +58,7 @@ const LoginForm = () => {
           />
         </div>
         <div className="password-div">
-          <label className="password-label" htmlFor='password'>Password</label>
+          {/* <label className="password-label" htmlFor='password'>Password</label> */}
           <input
             name='password'
             type='password'
@@ -69,8 +69,8 @@ const LoginForm = () => {
 
         </div>
         <div className="login-demo-btn">
-          <button className="btn-rnb login-btn" type='submit'>Login</button>
-          <button className="btn-demo" onClick={demoUser}>Demo</button>
+          <button className="login-btn" type='submit'>Login</button>
+          <button className="demo-btn" onClick={demoUser}>Demo</button>
         </div>
         <p>Not a Boss-Shot Member? <a href="/sign-up">Sign up Here.</a></p>
       </form>
