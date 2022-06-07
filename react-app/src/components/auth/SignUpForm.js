@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { Redirect } from 'react-router-dom';
 import { signUp } from '../../store/session';
-
+import logo from '../../assets/boss-shots.png'
 const SignUpForm = () => {
   const [errors, setErrors] = useState([]);
   const [username, setUsername] = useState('');
@@ -43,51 +43,60 @@ const SignUpForm = () => {
   }
 
   return (
-    <form onSubmit={onSignUp} className="form-login">
-      <div>
+    <div id="signup" className='auth'>
+      <form onSubmit={onSignUp} className="form-signup">
+        <img src={logo}/>
+        <h1>Sign Up For Boss-Shots</h1>
+      <div id="errors">
         {errors.map((error, ind) => (
           <div key={ind}>{error}</div>
         ))}
       </div>
       <div className="email-div">
-        <label className="username-label">User Name</label>
+        {/* <label className="username-label">User Name</label> */}
         <input
           type='text'
           name='username'
           onChange={updateUsername}
           value={username}
+          placeholder="User Name"
         ></input>
       </div>
       <div className="email-div">
-        <label className="email-label-signup">Email</label>
+        {/* <label className="email-label-signup">Email</label> */}
         <input
           type='text'
           name='email'
           onChange={updateEmail}
           value={email}
+          placeholder="Email"
         ></input>
       </div>
       <div className="password-div">
-        <label className="password-label-signup">Password</label>
+        {/* <label className="password-label-signup">Password</label> */}
         <input
           type='password'
           name='password'
           onChange={updatePassword}
           value={password}
+          placeholder="Password"
         ></input>
       </div>
       <div className="email-div">
-        <label className="rereet-password-label">Repeat Password</label>
+        {/* <label className="rereet-password-label">Repeat Password</label> */}
         <input
           type='password'
           name='repeat_password'
           onChange={updateRepeatPassword}
           value={repeatPassword}
-          required={true}
+          placeholder="Repeat Password"
         ></input>
       </div>
-      <button className="btn-rnb" type='submit'>Sign Up</button>
+      <button className="signup-btn" type='submit'>Sign Up</button>
+      <p>Already a Boss-Shot Member? <a href="/login">Log In Here.</a></p>
     </form>
+
+    </div>
   );
 };
 

@@ -1,12 +1,61 @@
+#signup, #login{
+    display: flex;
+    justify-content: center;
+}
+
 .form-login {
 
     display: flex;
+    background-color: white;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 500px
+    text-align: center;
+    width: 350px;
+    height: 425px;
+    padding: 20px;
+    color:gray;
+    border-radius: 5px;
 }
 
+.form-signup{
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 350px;
+    height: 525px;
+    padding: 20px;
+    color:gray;
+    border-radius: 5px;
+
+}
+
+.form-signup h1, .form-login h1{
+    font-size: larger;
+}
+.form-signup img,.form-login img{
+    width: 100px;
+    height: 100px;
+}
+
+.form-signup input, .form-login input{
+    border-radius: 5px;
+    line-height: 20px;
+    text-indent: 10px;
+    border-color: rgb(137, 137, 137);
+    margin: 0;
+    border-width: 1px;
+    height: 55px;
+    padding: 0;
+}
+
+.form-signup a, .form-login a{
+    text-decoration: none;
+    color:rgb(0, 109, 172);
+}
 .email-label-login {
     margin-right: 38px;
 }
@@ -23,13 +72,7 @@
     margin-bottom: 10px;
 }
 
-.btn-demo {
-    margin-left: 20px;
-}
 
-.login-btn {
-    margin-left: 30px;
-}
 
 .rereet-password-label {
     margin-right: 9px;
@@ -49,4 +92,30 @@
 
 .email-label-signup {
     margin-right: 100px;
+}
+
+.signup-btn,.login-btn{
+    background-color: rgb(18, 143, 220);
+    color:rgb(255, 255, 255);
+    border-radius: 5px;
+    min-height: 40px;
+    font-weight: 700;
+    padding: 10px 25px;
+}
+.signup-btn:hover,.login-btn:hover,.demo-btn:hover{
+    opacity: 1;
+    color: rgba(0,0,0,.5);
+}
+.demo-btn{
+    background-color:rgb(255, 255, 255);
+    color:rgb(18, 143, 220);
+    border-radius: 5px;
+    min-height: 40px;
+    font-weight: 700;
+    padding: 10px 25px;
+}
+
+#errors{
+    color:red;
+    padding-bottom: 5px;
 }
