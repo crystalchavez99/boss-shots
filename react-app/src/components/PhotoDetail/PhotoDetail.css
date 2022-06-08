@@ -35,6 +35,7 @@
     border: 5px solid silver;
     border-radius: 10px;
     padding: 5px;
+    margin-top: 2rem;
 }
 
 .comment {
@@ -56,6 +57,7 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 15px;
+    border-bottom: 1px solid grey;
 }
 
 #add-comment-div {
@@ -71,7 +73,26 @@
     font-weight: bold;
     font-size: 1.2em;
 }
-
+#choose-tag button{
+    text-decoration: none;
+    background-color: white;
+    padding: 0.5rem;
+    font-weight: 800;
+    color:rgb(18, 143, 220);
+    border-radius: 3px;
+    border-color: rgb(18, 143, 220);
+}
+#photo-tag select{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    background-color: white;
+    padding: 0.5rem;
+    font-weight: 800;
+    color:rgb(18, 143, 220);
+    border-radius: 3px;
+    border-color: rgb(18, 143, 220);
+}
 #choose-tag input{
     border-radius: 5px;
     line-height: 20px;
@@ -83,10 +104,19 @@
 }
 
 #photo-tag{
-    border: 1px solid white;
     margin: 1rem;
 }
-.tag-connect{
+.tag-connect,#tag-remove{
     display: flex;
     flex-direction: row;
+}
+#tag-remove{
+    font-weight: 700;
+}
+#tag-remove i{
+    color:red;
+}
+#tag-input{
+    display: flex;
+    justify-content: center;
 }

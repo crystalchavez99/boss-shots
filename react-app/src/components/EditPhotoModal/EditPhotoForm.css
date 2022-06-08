@@ -3,8 +3,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
 
+}
+#modal-content{
+  border-radius: 5px;
+  padding: 1rem;
+}
 #edit-photo-title {
   margin: 10px;
   font-weight: bold;
@@ -12,13 +16,23 @@
 }
 
 #title-input{
-  margin-bottom: 10px;
+  border-radius: 5px;
+    line-height: 20px;
+    text-indent: 10px;
+    border-color: rgb(137, 137, 137);
+    margin-bottom: 10px;
+    border-width: 1px;
+    padding: 0;
 }
 
 #description-input{
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  border-radius: 5px;
+    line-height: 20px;
+    text-indent: 10px;
+    border-color: rgb(137, 137, 137);
+    margin-bottom: 10px;
+    border-width: 1px;
+    padding: 0;
 }
 
 #submit-button {
@@ -47,4 +61,18 @@ button.delete-btn{
 button.edit-btn:hover{
   opacity: 1;
     color: rgba(0,0,0,.5);
+}
+#delete-photo-btn-div button#submit-button{
+  background-color: white;
+  color:green;
+  border-color: green;
+  font-weight: 800;
+  padding: .5rem;
+}
+#delete-photo-btn-div button#delete-button{
+  background-color: white;
+  color:red;
+  border-color: red;
+  font-weight: 800;
+  padding: .5rem;
 }
