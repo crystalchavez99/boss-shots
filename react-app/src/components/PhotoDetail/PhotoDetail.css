@@ -81,3 +81,12 @@
     border-width: 1px;
     padding: 0;
 }
+
+#photo-tag{
+    border: 1px solid white;
+    margin: 1rem;
+}
+.tag-connect{
+    display: flex;
+    flex-direction: row;
+}

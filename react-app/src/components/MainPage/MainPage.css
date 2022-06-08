@@ -5,6 +5,7 @@
     'main main main myphotos'
     'main main main myalbums';
     color: rgb(33, 33, 36);
+    margin: 2rem 10rem;
 }
 
 .photo-feed {
