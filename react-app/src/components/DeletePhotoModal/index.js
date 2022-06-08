@@ -7,7 +7,7 @@ function DeletePhotoModal({ photo }) {
 
   return (
     <>
-      <button className="btn-rnb" id="edit-photo-btn" onClick={() => setShowModal(true)}>Delete Photo</button>
+      <button className="delete-btn" id="edit-photo-btn" onClick={() => setShowModal(true)}>Delete Photo</button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
           <DeletePhotoForm setShowModal={setShowModal} photo={photo} />
