@@ -23,3 +23,27 @@
 #cancel-dlt-comment{
   margin-left: 5px;
 }
+.delete-comment-btn{
+  display: flex;
+text-decoration: none;
+background-color: red;
+padding: 0.5rem;
+font-weight: 800;
+color: white;
+border-radius: 3px;
+}
+
+button.yes-delete-comment{
+  background-color: white;
+color: green;
+border-color: green;
+font-weight: 800;
+padding: .5rem;
+}
+button.no-delete-comment{
+  background-color: white;
+color: red;
+border-color: red;
+font-weight: 800;
+padding: .5rem;
+}

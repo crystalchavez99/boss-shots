@@ -31,7 +31,7 @@ function AddCommentForm({ photo }) {
   return (
     <>
       <form id="add-comment-form" onSubmit={commentSubmit}>
-        <div>
+        <div className="errors">
           {errors?.length > 0 && errors?.map((error, ind) => (
             <div key={ind}>{error}</div>
           ))}

@@ -21,3 +21,6 @@ font-weight: 700;
 padding: 10px 25px;
 display: flex;
 }
+.errors{
+  color:red;
+}

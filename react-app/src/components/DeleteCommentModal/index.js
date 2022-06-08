@@ -7,7 +7,7 @@ function DeleteCommentModal({ comment }) {
 
   return (
     <>
-      <button className="btn-rnb" id="edit-photo-btn" onClick={() => setShowModal(true)}>Delete Comment</button>
+      <button className="delete-comment-btn" id="edit-photo-btn" onClick={() => setShowModal(true)}>Delete Comment</button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
           <DeleteCommentForm setShowModal={setShowModal} comment={comment} />
