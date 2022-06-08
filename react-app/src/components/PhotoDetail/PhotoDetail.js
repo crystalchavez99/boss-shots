@@ -85,54 +85,55 @@ function PhotoDetail() {
             {/* <a href="/home">Back to Photo Feed</a> */}
             <div className='photo-post'>
                 <img src={mainPhoto[0]?.photo_url} alt={mainPhoto[0]?.title} />
-                {users?.map(user => {
-                    if (mainPhoto[0]?.user_id == user?.id) {
-                        return (
-                            <div id="photo-info">
-                                <p key={user?.id}>Posted By: {user.username}</p>
-                                <h3>{mainPhoto[0]?.title}</h3>
-                                <p key={mainPhoto[0]?.id}>{mainPhoto[0]?.description}</p>
-                            </div>
-                        )
-                    }
-                })
-                }
-                {sessionUser && sessionUser.id === owner[0]?.id &&
-                    <div id="edit-delete">
-                        <EditPhotoModal photo={mainPhoto[0]} />
-                        <DeletePhotoModal photo={mainPhoto[0]} />
-                    </div>
-                }
-                <div>
-                    {sessionUser && sessionUser.id === owner[0]?.id &&
-                        <div id="photo-tag">
-                                <h3>Tags</h3>
-                                <div id="tag-input">
-                                <form method="get" onSubmit={onSubmit} id="choose-tag">
-                                    <input type="text" onChange={(e) => setNewTag(e.target.value)} value={newTag} placeholder="type new tag"></input>
-
-                                    <button >add new tag </button>
-                                </form>
-                                <select onChange={(e) => dispatch(addTagToPhoto(photo_id.photo_id, +e.target.value))}>
-                                <option value="none" selected disabled>Select tag</option>
-                                {tags?.map(tag => (<option value={tag?.id} key={tag?.id} >
-                                    {tag?.tag_name}
-                                </option>))}
-                                </select>
-                            </div>
-
-                            <div className='tag-connect'>
-                            {my_tags?.map(tag => (
-                                <div id="tag-remove">
-                                    <NavLink className="tads-display-nav" to={`/tags/${tag?.id}/photos`} key={tag.id} exact={true}>#{tag.tag_name}</NavLink>
-                                    {sessionUser && sessionUser.id === owner[0]?.id && <i className="fa-solid fa-minus" onClick={() => dispatch(removeTagFromPhoto(photo_id.photo_id, tag.id))}> </i>}
+                <div id="under-photo">
+                    {users?.map(user => {
+                        if (mainPhoto[0]?.user_id == user?.id) {
+                            return (
+                                <div id="photo-info">
+                                    <p key={user?.id}>Posted By: {user.username}</p>
+                                    <h3>{mainPhoto[0]?.title}</h3>
+                                    <p key={mainPhoto[0]?.id}>{mainPhoto[0]?.description}</p>
                                 </div>
-                            ))}</div>
+                            )
+                        }
+                    })
+                    }
+                    {sessionUser && sessionUser.id === owner[0]?.id &&
+                        <div id="edit-delete">
+                            <EditPhotoModal photo={mainPhoto[0]} />
+                            <DeletePhotoModal photo={mainPhoto[0]} />
                         </div>
                     }
+                    <div>
+                        {sessionUser && sessionUser.id === owner[0]?.id &&
+                            <div id="photo-tag">
+                                <h3>Tags</h3>
+                                <div id="tag-input">
+                                    <form method="get" onSubmit={onSubmit} id="choose-tag">
+                                        <input type="text" onChange={(e) => setNewTag(e.target.value)} value={newTag} placeholder="type new tag"></input>
 
-                </div>
-                {/* <div>
+                                        <button >add new tag </button>
+                                    </form>
+                                    <select onChange={(e) => dispatch(addTagToPhoto(photo_id.photo_id, +e.target.value))}>
+                                        <option value="none" selected disabled>Select tag</option>
+                                        {tags?.map(tag => (<option value={tag?.id} key={tag?.id} >
+                                            {tag?.tag_name}
+                                        </option>))}
+                                    </select>
+                                </div>
+
+                                <div className='tag-connect'>
+                                    {my_tags?.map(tag => (
+                                        <div id="tag-remove">
+                                            <NavLink className="tads-display-nav" to={`/tags/${tag?.id}/photos`} key={tag.id} exact={true}>#{tag.tag_name}</NavLink>
+                                            {sessionUser && sessionUser.id === owner[0]?.id && <i className="fa-solid fa-minus" onClick={() => dispatch(removeTagFromPhoto(photo_id.photo_id, tag.id))}> </i>}
+                                        </div>
+                                    ))}</div>
+                            </div>
+                        }
+
+                    </div>
+                    {/* <div>
                     {my_tags?.map(tag => (
                         <>
                             <NavLink className="tads-display-nav" to={`/tags/${tag?.id}/photos`} key={tag.id} exact={true}>#{tag.tag_name}</NavLink>
@@ -140,31 +141,33 @@ function PhotoDetail() {
                         </>
                     ))}
                 </div> */}
-            </div>
 
-            <div className='photo-comments'>
-                <div id="add-comment-div">
-                    {sessionUser && <AddCommentForm photo={mainPhoto[0]} />}
+
+                    <div className='photo-comments'>
+                        <div id="add-comment-div">
+                            {sessionUser && <AddCommentForm photo={mainPhoto[0]} />}
+                        </div>
+                        <div id="comments-div-title">Comments</div>
+                        {photoComments?.map(comment => {
+                            return (
+                                <div className='comment'>
+                                    <p>{comment.comment}</p>
+                                    {users?.map(user => {
+                                        if (comment?.user_id == user?.id) {
+                                            return (
+                                                <p key={user?.id}>{user?.username}</p>
+                                            )
+                                        }
+                                    })}
+                                    {sessionUser && sessionUser.id === comment?.user_id &&
+                                        <div id="delete">
+                                            <DeleteCommentModal comment={comment} />
+                                        </div>
+                                    }
+                                </div>)
+                        })}
+                    </div>
                 </div>
-                <div id="comments-div-title">Comments</div>
-                {photoComments?.map(comment => {
-                    return (
-                        <div className='comment'>
-                            <p>{comment.comment}</p>
-                            {users?.map(user => {
-                                if (comment?.user_id == user?.id) {
-                                    return (
-                                        <p key={user?.id}>{user?.username}</p>
-                                    )
-                                }
-                            })}
-                            {sessionUser && sessionUser.id === comment?.user_id &&
-                                <div id="delete">
-                                    <DeleteCommentModal comment={comment} />
-                                </div>
-                            }
-                        </div>)
-                })}
             </div>
         </div >
     )

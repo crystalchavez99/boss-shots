@@ -3,7 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
+    padding: 0;
+    width: auto;
     margin-bottom: 1000px;
 }
 
@@ -18,12 +19,21 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    font-weight: 700;
+    width: 500px;
+    height: 85px;
+    padding: 0;
+}
+#photo-info p, #photo-info h3{
+    text-align: left;
+    margin: 0;
 }
 
 .photo-post {
     text-align: center;
+    width: 100%;
     border-bottom: 1px solid grey;
+
 }
 
 .photo-post img {
@@ -119,4 +129,10 @@
 #tag-input{
     display: flex;
     justify-content: center;
+}
+#under-photo{
+    background-color: #DBE2EF;
+    margin: 0;
+    padding: 1rem;
+    color:black;
 }
