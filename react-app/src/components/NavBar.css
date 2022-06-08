@@ -36,9 +36,7 @@ nav{
     opacity: 1;
     color: rgba(0,0,0,.5);
 }
-#login-nav-link {}
 
-#login-nav-link:hover {}
 
 .login_sign_up_div {
     display: flex;
