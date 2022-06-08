@@ -84,7 +84,9 @@ function PhotoDetail() {
         <div className='photo-detail'>
             {/* <a href="/home">Back to Photo Feed</a> */}
             <div className='photo-post'>
+                <div id="photo-display">
                 <img src={mainPhoto[0]?.photo_url} alt={mainPhoto[0]?.title} />
+                </div>
                 <div id="under-photo">
                     {users?.map(user => {
                         if (mainPhoto[0]?.user_id == user?.id) {
@@ -147,7 +149,6 @@ function PhotoDetail() {
                         <div id="add-comment-div">
                             {sessionUser && <AddCommentForm photo={mainPhoto[0]} />}
                         </div>
-                        <div id="comments-div-title">Comments</div>
                         {photoComments?.map(comment => {
                             return (
                                 <div className='comment'>
@@ -155,7 +156,7 @@ function PhotoDetail() {
                                     {users?.map(user => {
                                         if (comment?.user_id == user?.id) {
                                             return (
-                                                <p key={user?.id}>{user?.username}</p>
+                                                <p key={user?.id} id="comment-user">{user?.username}</p>
                                             )
                                         }
                                     })}

@@ -1,12 +1,23 @@
 #add-comment-form {
   display: flex;
   flex-direction: column;
+  margin-bottom: 1rem;
 }
 #comment-input-label{
   font-size: 1.1em;
   font-weight: bold;
   margin: 3px;
+  text-align: left;
 }
 #submit-btn-div{
   margin-top: 7px;
+}
+.comment-submit{
+  background-color: rgb(18, 143, 220);
+color: rgb(255, 255, 255);
+border-radius: 5px;
+min-height: 40px;
+font-weight: 700;
+padding: 10px 25px;
+display: flex;
 }

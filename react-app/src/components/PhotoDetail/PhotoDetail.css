@@ -4,15 +4,18 @@
     justify-content: center;
     align-items: center;
     padding: 0;
+
+    margin: 0;
     width: auto;
-    margin-bottom: 1000px;
 }
 
 .photo-detail a {
     display: flex;
     flex-direction: row;
     text-decoration: none;
-    color: white;
+    color:black;
+    padding-right: 0.5rem;
+
 }
 
 #photo-info {
@@ -21,8 +24,10 @@
     align-items: flex-start;
     font-weight: 700;
     width: 500px;
-    height: 85px;
+    height: 100px;
     padding: 0;
+    line-break: normal;
+    margin-bottom: 1rem;
 }
 #photo-info p, #photo-info h3{
     text-align: left;
@@ -35,10 +40,14 @@
     border-bottom: 1px solid grey;
 
 }
-
+#photo-display{
+    margin: 0;
+}
 .photo-post img {
-    max-width: 1500px;
-    max-height: 500px;
+    max-width: 900px;
+    max-height:400px;
+    margin: 0;
+    padding: 0;
 }
 
 .photo-comments {
@@ -49,12 +58,24 @@
 }
 
 .comment {
-    border: 3px solid rgb(23, 106, 240);
     border-radius: 8px;
     padding: 5px;
     margin-right: 5px;
     margin-left: 5px;
     margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.comment p{
+    margin: 0;
+    color:rgb(137, 137, 137);
+    font-size: 15px;
+}
+
+#comment-user{
+    font-weight: 700;
+    color:rgb(0, 109, 172);
 }
 
 .tads-display-nav {
@@ -72,8 +93,8 @@
 
 #add-comment-div {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 #comments-div-title {
@@ -109,6 +130,7 @@
     text-indent: 10px;
     border-color: rgb(137, 137, 137);
     margin: 0;
+    height: 35px;
     border-width: 1px;
     padding: 0;
 }
@@ -129,6 +151,16 @@
 #tag-input{
     display: flex;
     justify-content: center;
+    padding: 1rem;
+}
+#add-comment-div textarea{
+    border-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 1px #9ea4a7;
+    height: 100px;
+    width: 500px;
+    line-break: normal;
 }
 #under-photo{
     background-color: #DBE2EF;

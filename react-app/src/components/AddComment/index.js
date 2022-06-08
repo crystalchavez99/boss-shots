@@ -36,17 +36,15 @@ function AddCommentForm({ photo }) {
             <div key={ind}>{error}</div>
           ))}
         </div>
-        <label id="comment-input-label">
-          Add Comment:
-        </label>
         <textarea
           id="comment-input"
           type="text"
           value={comment}
           onChange={(e) => setComment(e.target.value)}
+          placeholder="Add a comment"
         />
         <div id="submit-btn-div">
-          <button className="btn-rnb" id="submit-button" type="submit">Add Comment</button>
+          <button className="comment-submit" id="submit-button" type="submit">Add Comment</button>
         </div>
       </form>
     </>
