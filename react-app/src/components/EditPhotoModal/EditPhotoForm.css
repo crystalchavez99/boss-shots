@@ -24,3 +24,27 @@
 #submit-button {
   margin-bottom: 8px;
 }
+
+button.edit-btn{
+    display: flex;
+    text-decoration: none;
+    background-color: white;
+    padding: 0.5rem;
+    font-weight: 800;
+    color:rgb(18, 143, 220);
+    border-radius: 3px;
+    border-color: rgb(18, 143, 220);
+}
+button.delete-btn{
+  display: flex;
+  text-decoration: none;
+  background-color: red;
+  padding: 0.5rem;
+  font-weight: 800;
+  color:white;
+  border-radius: 3px;
+}
+button.edit-btn:hover{
+  opacity: 1;
+    color: rgba(0,0,0,.5);
+}

@@ -3,7 +3,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 1rem;
+    margin-bottom: 1000px;
+}
 
+.photo-detail a {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: white;
+}
+
+#photo-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .photo-post {
@@ -12,8 +27,8 @@
 }
 
 .photo-post img {
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 1500px;
+    max-height: 500px;
 }
 
 .photo-comments {
@@ -43,16 +58,26 @@
     margin-bottom: 15px;
 }
 
-#add-comment-div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#add-comment-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#comments-div-title{
-  margin-top: 12px;
-  margin-bottom: 3px;
-  margin-left: 5px;
-  font-weight: bold;
-  font-size: 1.2em;
+#comments-div-title {
+    margin-top: 12px;
+    margin-bottom: 3px;
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#choose-tag input{
+    border-radius: 5px;
+    line-height: 20px;
+    text-indent: 10px;
+    border-color: rgb(137, 137, 137);
+    margin: 0;
+    border-width: 1px;
+    padding: 0;
 }

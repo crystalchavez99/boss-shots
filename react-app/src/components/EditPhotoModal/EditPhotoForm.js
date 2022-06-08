@@ -26,7 +26,7 @@ function EditPhotoForm({ setShowModal, photo }) {
 
     dispatch(updatePhotoThunk(newPhoto))
       .then((res) => {
-       
+
         if (!res?.ok) {
           setErrors(res?.errors)
         } else {
@@ -73,7 +73,7 @@ function EditPhotoForm({ setShowModal, photo }) {
           onChange={(e) => setDescription(e.target.value)}
         />
         <div id="submit-btn-div">
-          <button className="btn-rnb" id="submit-button" type="submit">Edit Photo</button>
+          <button className="edit-btn" type="submit">Edit Photo</button>
         </div>
       </form>
     </>

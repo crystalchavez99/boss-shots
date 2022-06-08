@@ -72,7 +72,7 @@ function PhotoDetail() {
         })
         if (tag.ok) {
             const data = await tag.json()
-            
+
             dispatch(addTag(data))
             dispatch(addTagToPhoto(photo_id.photo_id, data.id))
             setNewTag("")
@@ -82,18 +82,21 @@ function PhotoDetail() {
 
     return (
         <div className='photo-detail'>
+            {/* <a href="/home">Back to Photo Feed</a> */}
             <div className='photo-post'>
-                <h1>{mainPhoto[0]?.title}</h1>
                 <img src={mainPhoto[0]?.photo_url} alt={mainPhoto[0]?.title} />
                 {users?.map(user => {
                     if (mainPhoto[0]?.user_id == user?.id) {
                         return (
-                            <p key={user?.id}>Posted By: {user.username}</p>
+                            <div id="photo-info">
+                                <p key={user?.id}>Posted By: {user.username}</p>
+                                <h3>{mainPhoto[0]?.title}</h3>
+                                <p key={mainPhoto[0]?.id}>{mainPhoto[0]?.description}</p>
+                            </div>
                         )
                     }
                 })
                 }
-                <p key={mainPhoto[0]?.id}>{mainPhoto[0]?.description}</p>
                 {sessionUser && sessionUser.id === owner[0]?.id &&
                     <div id="edit-delete">
                         <EditPhotoModal photo={mainPhoto[0]} />
@@ -102,10 +105,10 @@ function PhotoDetail() {
                 }
                 <div>
                     {sessionUser && sessionUser.id === owner[0]?.id &&
-                        <>
+                        <div id="photo-tag">
                             <div>
-                                <form method="get" onSubmit={onSubmit}>
-                                    <input type="text" onChange={(e) => setNewTag(e.target.value)} value={newTag} ></input>
+                                <form method="get" onSubmit={onSubmit} id="choose-tag">
+                                    <input type="text" onChange={(e) => setNewTag(e.target.value)} value={newTag} placeholder="type new tag"></input>
 
                                     <button >add new tag </button>
                                 </form> </div>
@@ -115,7 +118,7 @@ function PhotoDetail() {
                                     {tag?.tag_name}
                                 </option>))}
                             </select>
-                        </>
+                        </div>
                     }
 
                 </div>
