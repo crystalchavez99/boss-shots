@@ -46,3 +46,10 @@ nav{
     width: 150px;
     justify-content: space-between;
 }
+
+#user-action{
+    display: flex;
+}
+#user-action li{
+    margin-right: 1rem;
+}

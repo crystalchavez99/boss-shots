@@ -7,6 +7,14 @@
     color: rgb(33, 33, 36);
     margin: 2rem 10rem;
 }
+#add-photo-btn,#add-album-btn{
+  background-color: rgb(18, 143, 220);
+color: rgb(255, 255, 255);
+border-radius: 5px;
+min-height: 40px;
+font-weight: 700;
+padding: 10px 25px;
+}
 
 .photo-feed {
   grid-area: main;

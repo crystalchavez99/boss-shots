@@ -21,11 +21,6 @@ function UserPhotos({ photos }) {
       <div id="user-photos-title">
         <h3 className="album-title">My Photos </h3>
 
-        {user_id && <div className="add-photo-div">
-          <div><AddPhotoModal /></div>
-
-        </div>}
-
       </div>
       <dl id="my-photos-ul">
         {filteredPhotos?.map(photo => (

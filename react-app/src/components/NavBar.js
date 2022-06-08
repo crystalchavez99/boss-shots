@@ -4,8 +4,8 @@ import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import LogoutButton from './auth/LogoutButton';
 import './NavBar.css'
-
-
+import AddPhotoModal from './AddPhotoModal';
+import AddAlbumModal from './AddAlbumModal.js';
 const NavBar = () => {
   const sessionUser = useSelector(state => state.session.user);
   return (
@@ -34,9 +34,18 @@ const NavBar = () => {
 
 
         {sessionUser &&
+         <div id="user-action">
+            <li>
+            <AddPhotoModal />
+          </li>
+          <li>
+          <AddAlbumModal />
+          </li>
           <li>
             <LogoutButton className="logout-btn" />
-          </li>}
+          </li>
+         </div>
+          }
       </ul>
     </nav>
   );
