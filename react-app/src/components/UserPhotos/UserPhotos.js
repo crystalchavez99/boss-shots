@@ -17,7 +17,7 @@ function UserPhotos({ photos }) {
   }, [dispatch])
 
   return (
-    <>
+    <div id="my-photos">
       <div id="user-photos-title">
         <h3 className="album-title">My Photos </h3>
 
@@ -29,7 +29,7 @@ function UserPhotos({ photos }) {
           </dt>
         ))}
       </dl>
-    </>
+    </div>
   )
 }
 

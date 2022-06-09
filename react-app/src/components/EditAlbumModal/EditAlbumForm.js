@@ -13,7 +13,7 @@ export default function EditAlbumForm({ album, setShowModal }) {
     e.preventDefault()
     dispatch(updateSingleAlbum(title, album.id))
       .then((res) => {
-    
+
         if (!res?.ok) {
           setErrors(res?.errors)
         } else {
@@ -30,7 +30,7 @@ export default function EditAlbumForm({ album, setShowModal }) {
       ))}
       <label> Title: </label>
       <input id="edit-album-title-input" type="text" onChange={e => setTitle(e.target.value)} value={title} ></input>
-      <button className="btn-rnb">Submit</button>
+      <button className="edit-album-submit">Submit</button>
     </form>
 
   )

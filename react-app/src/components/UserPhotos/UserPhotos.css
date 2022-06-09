@@ -3,7 +3,6 @@
   list-style-type: none;
   flex-wrap: wrap;
   margin: none;
-  padding-left: 16px;
 }
 
 .my-filtered-photos {
@@ -18,10 +17,10 @@
   box-shadow: #f2f3f4 1px 2px 9px 0px;
 }
 
-#user-photos-title {
+#user-photos-title h3{
   display: flex;
-  justify-content: center;
-  align-self: center;
+  justify-content: flex-start;
+
 }
 
 .add-photo-div {
@@ -29,4 +28,8 @@
   display: flex;
   justify-content: center;
   align-self: center
+}
+
+#my-photos{
+  padding: 1rem;
 }

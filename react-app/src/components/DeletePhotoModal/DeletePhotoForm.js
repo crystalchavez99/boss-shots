@@ -16,6 +16,7 @@ function DeletePhotoForm({ setShowModal, photo }) {
           <div id="submit-btn-div">
             <button id="submit-button" className="btn-rnb" onClick={() => {
               dispatch(deletePhotoThunk(photo))
+              setShowModal(false)
               history.push(`/home`)
             }
             }>Yes</button>
