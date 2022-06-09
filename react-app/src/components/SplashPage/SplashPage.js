@@ -3,7 +3,6 @@ import { NavLink, useHistory } from 'react-router-dom';
 import { useSelector,useDispatch } from 'react-redux';
 import './SplashPage.css';
 import logo from '../../assets/boss-shots.png';
-import {BackgroundSlider} from 'react-background-slider';
 import { getAllPhotosThunk } from '../../store/photos';
 
 function SplashPage() {
@@ -34,11 +33,6 @@ function SplashPage() {
           <NavLink to='/sign-up' className="splash-links" exact={true}>Start For Free</NavLink>
         </div>
       </div>
-      {/* <BackgroundSlider
-          images={listurl}
-          duration={8}
-          transition={2}
-        /> */}
     </div>
   )
 }
