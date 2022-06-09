@@ -1,0 +1,14 @@
+#footer-container{
+    padding: 1rem;
+    background-color: rgb(0, 0, 0);
+}
+
+.container-links{
+    margin: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.container-links a{
+    text-decoration: none;
+}
