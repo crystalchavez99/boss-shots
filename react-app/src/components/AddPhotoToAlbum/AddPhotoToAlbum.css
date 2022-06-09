@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   width: 400px;
   height: 400px;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 /* .btn-choose-photo{
@@ -16,13 +16,24 @@
 }
 
 .btn-choose-photo-album {
-  height: 20px;
-  width: 50px;
-
+  background-color: rgb(18, 143, 220);
+color: rgb(255, 255, 255);
+border-radius: 5px;
+min-height: 40px;
+font-weight: 700;
+padding: 10px 25px;
+display: flex;
 }
 
 .div-btn-add-photo {
   display: flex;
   align-self: flex-end;
 
+}
+.choose-photo{
+  background-color: rgb(18, 143, 220);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  min-height: 40px;
+  font-weight: 700;
 }

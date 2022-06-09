@@ -12,7 +12,7 @@ export default function AddPhotoToAlbum({ id, setShowModal }) {
   const [selectedPhoto, setSelectedPhoto] = useState("")
   const photos = useSelector(state => Object.values(state.photos))
 
-  
+
   useEffect(() => {
     dispatch(getAllPhotosThunk())
 
@@ -23,7 +23,7 @@ export default function AddPhotoToAlbum({ id, setShowModal }) {
 
   return (
     <>
-      <p>Choose a photo</p>
+      <h3>Choose one photo</h3>
       <dl className="choosePhoto">
         {photos.map(photo => (
           <>

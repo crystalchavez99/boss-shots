@@ -31,3 +31,14 @@ font-weight: 700;
 padding: 10px 25px;
 display: flex;
 }
+
+.update-album{
+  display: flex;
+text-decoration: none;
+background-color: white;
+padding: 0.5rem;
+font-weight: 800;
+color: rgb(18, 143, 220);
+border-radius: 3px;
+border-color: rgb(18, 143, 220);
+}

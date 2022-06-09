@@ -32,8 +32,8 @@ export default function DisplayAlbums({ albums }) {
                             <li className="albumLi"
                                 style={{
                                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                    listStyle: "none", width: "100px", height: "100px", background: `url(${album?.photos?.photos[0]?.photo_url})`, backgroundRepeat: "no-repeat",
-                                    backgroundSize: "100px 100px", borderRadius: "4px", margin: "3px"
+                                    listStyle: "none", width: "150px", height: "150px", background: `url(${album?.photos?.photos[0]?.photo_url})`, backgroundRepeat: "no-repeat",
+                                    backgroundSize: "150px 150px", borderRadius: "4px", margin: "3px",
                                 }}><p>{album.title}</p>
                             </li>
                         </NavLink>

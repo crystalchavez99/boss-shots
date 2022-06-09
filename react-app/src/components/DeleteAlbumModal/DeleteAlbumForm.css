@@ -23,4 +23,31 @@
 
 .btn-no {
   margin-left: 10px;
+
+}
+
+ #album-delete{
+  display: flex;
+  text-decoration: none;
+  background-color: red;
+  padding: 0.5rem;
+  font-weight: 800;
+  color: white;
+  border-radius: 3px;
+}
+
+#album-delete-no{
+  background-color: white;
+color: red;
+border-color: red;
+font-weight: 800;
+padding: .5rem;
+}
+
+#album-delete-yes{
+  background-color: white;
+color: green;
+border-color: green;
+font-weight: 800;
+padding: .5rem;
 }

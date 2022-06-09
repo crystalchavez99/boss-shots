@@ -28,8 +28,8 @@ export default function DeleteAlbumForm({ id, setShowModal, album }) {
         <>
             <form id="delete-album-form" onSubmit={onSubmit} action="/home">
                 <div id="delete-album-title">Are you sure you want to delete this album?</div>
-                <div className="album-delete-btns"> <button className="btn-rnb" >Yes</button>
-                    <button className="btn-no"> No </button>
+                <div className="album-delete-btns"> <button className="btn-rnb"  id="album-delete-yes">Yes</button>
+                    <button className="btn-no" id="album-delete-no" onClick={()=>setShowModal(false)}> No </button>
                 </div>
             </form>
         </>

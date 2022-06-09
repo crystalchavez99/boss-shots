@@ -8,7 +8,7 @@ export default function DeleteAlbumModal({ id, album }) {
 
     return (
         <>
-            <button className="btn-rnb" onClick={() => setShowModal(true)} >Delete</button>
+            <button  id="album-delete" className="btn-rnb" onClick={() => setShowModal(true)} >Delete</button>
             {showModal && (
                 <Modal onClose={() => setShowModal(false)}>
                     <DeleteAlbumForm setShowModal={setShowModal} album={album} id={id} />
