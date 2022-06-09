@@ -1,8 +1,15 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import {NavLink, useHistory} from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import './SplashPage.css';
 import logo from '../../assets/boss-shots.png'
 function SplashPage() {
+  const history = useHistory()
+  const sessionUser = useSelector(state => state.session.user);
+  
+  if (sessionUser){
+    history.push('/home')
+  }
   return (
     <div id="splash-page">
       <div id="splash-main-div">
