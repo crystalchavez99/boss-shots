@@ -1,6 +1,7 @@
 const POST_COMMENT = 'comment/POST_COMMENT'
 const DELETE_COMMENT = 'comment/DELETE_COMMENT'
 const GET_COMMENTS = 'comment/GET_COMMENTS'
+const UPDATE_COMMENT = 'comment/UPDATE_COMMENT'
 
 const getAllComments = (comments) => ({
   type: GET_COMMENTS,
@@ -9,6 +10,11 @@ const getAllComments = (comments) => ({
 
 const postComment = (comment) => ({
   type: POST_COMMENT,
+  payload: comment
+})
+
+const updateComment = (comment) => ({
+  type: UPDATE_COMMENT,
   payload: comment
 })
 
@@ -31,6 +37,23 @@ export const postCommentThunk = (photoId, comment) => async (dispatch) => {
     const newComment = await response.json();
     dispatch(postComment(newComment));
     //return newComment;
+  }else if (response.status < 500) {
+    const data = await response.json();
+
+    return data
+  }
+  return response;
+}
+
+export const updateCommentThunk = (comment, commentId) => async (dispatch) => {
+  const response = await fetch(`/api/comments/${commentId}/edit`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({comment})
+  })
+  if (response.ok) {
+    const updatedComment = await response.json();
+    dispatch(updateComment(updatedComment));
   }else if (response.status < 500) {
     const data = await response.json();
 
@@ -70,12 +93,16 @@ const commentsReducer = (state = {}, action) => {
   switch (action.type) {
     case GET_COMMENTS:
       newState = { ...state };
-     
+
       action.payload.forEach(comment => newState[comment.id] = comment);
       //newState[action.payload.id] = action.payload;
       return {...newState,...state};
     case POST_COMMENT:
       newState = { [action.payload.id]: action.payload, ...state };
+      return newState;
+    case UPDATE_COMMENT:
+      newState = { ...state };
+      newState[action.payload.id] = action.payload;
       return newState;
     case DELETE_COMMENT:
       newState = {...state}

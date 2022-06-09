@@ -169,3 +169,7 @@
     color:black;
     flex-grow: 1;
 }
+
+#delete{
+    display: flex;
+}

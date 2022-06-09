@@ -15,7 +15,6 @@ albums_router = Blueprint("albums", __name__)
 @albums_router.route("/all")
 def all_albums():
   results = Album.query.all()
-  print(results)
   return { "albums": [album.to_dict() for album in results] }
 
 # POST new Album

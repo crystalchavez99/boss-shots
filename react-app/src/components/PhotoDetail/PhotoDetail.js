@@ -7,6 +7,7 @@ import EditPhotoModal from '../EditPhotoModal';
 import DeletePhotoModal from '../DeletePhotoModal';
 import DeleteCommentModal from '../DeleteCommentModal';
 import AddCommentForm from '../AddComment';
+import EditCommentModal from '../EditCommentModal';
 import './PhotoDetail.css'
 import { getAllTags, addNewTag, addTag } from '../../store/tags'
 import { addTagToPhoto, removeTagFromPhoto } from '../../store/photos'
@@ -163,6 +164,7 @@ function PhotoDetail() {
                                     {sessionUser && sessionUser.id === comment?.user_id &&
                                         <div id="delete">
                                             <DeleteCommentModal comment={comment} />
+                                            <EditCommentModal comments={comment} />
                                         </div>
                                     }
                                 </div>)

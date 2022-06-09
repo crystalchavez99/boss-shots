@@ -5,5 +5,5 @@ from wtforms.validators import DataRequired, ValidationError
 
 
 class NewCommentForm(FlaskForm):
-    comment = StringField("Comment", validators=[DataRequired()])
+    comment = StringField("comment", validators=[DataRequired()])
     submit = SubmitField("Add Comment")
