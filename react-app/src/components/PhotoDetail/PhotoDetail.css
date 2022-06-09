@@ -4,9 +4,9 @@
     justify-content: center;
     align-items: center;
     padding: 0;
-
     margin: 0;
     width: auto;
+    flex-grow: 1;
 }
 
 .photo-detail a {
@@ -23,11 +23,10 @@
     flex-direction: column;
     align-items: flex-start;
     font-weight: 700;
-    width: 500px;
-    height: 100px;
+    width: 725px;
+    height: 75px;
     padding: 0;
     line-break: normal;
-    margin-bottom: 1rem;
 }
 #photo-info p, #photo-info h3{
     text-align: left;
@@ -38,7 +37,9 @@
     text-align: center;
     width: 100%;
     border-bottom: 1px solid grey;
-
+    margin: 0;
+    display: flex; flex-direction: column;
+    flex-grow: 1;
 }
 #photo-display{
     margin: 0;
@@ -164,7 +165,7 @@
 }
 #under-photo{
     background-color: #DBE2EF;
-    margin: 0;
     padding: 1rem;
     color:black;
+    flex-grow: 1;
 }

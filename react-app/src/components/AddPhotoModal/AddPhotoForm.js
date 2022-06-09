@@ -9,8 +9,6 @@ function AddPhotoForm({ setShowModal }) {
   const [image, setImage] = useState(null);
   const [errors, setErrors] = useState([]);
   const user_id = useSelector(state => state.session.user.id);
-  let data;
-
 
 
   // useEffect(()=>{
@@ -41,7 +39,7 @@ function AddPhotoForm({ setShowModal }) {
         setShowModal(false)
       }
     })
-  
+
 
   }
   const updateImage = (e) => {
@@ -68,7 +66,7 @@ function AddPhotoForm({ setShowModal }) {
 
         />
         <label id="photo-url-label">
-          Photo URL:
+          Choose File to Upload:
         </label>
         <input
           id="url-input"
