@@ -20,3 +20,12 @@
   margin-left: 15px;
   margin-right: 15px;
 }
+.submit-album-button{
+  background-color: rgb(18, 143, 220);
+color: rgb(255, 255, 255);
+border-radius: 5px;
+min-height: 40px;
+font-weight: 700;
+padding: 10px 25px;
+display: flex;
+}

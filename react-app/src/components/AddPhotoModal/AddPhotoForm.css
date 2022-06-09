@@ -13,10 +13,26 @@
 
 #title-input{
   margin-bottom: 10px;
+  height: 35px;
 }
 #url-input{
   margin-bottom: 10px;
   text-align-last: center;
+}
+input[type="file"]{
+  display: none;
+}
+#photo-url-label{
+  display: flex;
+text-decoration: none;
+background-color: white;
+padding: 0.5rem;
+font-weight: 800;
+color: rgb(18, 143, 220);
+border-radius: 3px;
+border-color: rgb(18, 143, 220);
+  cursor: pointer;
+    margin-bottom: .5rem;
 }
 
 #description-input{
@@ -27,4 +43,14 @@
 
 #submit-button {
   margin-bottom: 8px;
+}
+
+.submit-photo-button{
+  background-color: rgb(18, 143, 220);
+color: rgb(255, 255, 255);
+border-radius: 5px;
+min-height: 40px;
+font-weight: 700;
+padding: 10px 25px;
+display: flex;
 }

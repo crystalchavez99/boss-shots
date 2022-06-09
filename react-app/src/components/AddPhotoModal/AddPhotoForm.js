@@ -66,13 +66,14 @@ function AddPhotoForm({ setShowModal }) {
 
         />
         <label id="photo-url-label">
-          Choose File to Upload:
-        </label>
+          Choose File to Upload
+
         <input
           id="url-input"
           type="file"
           onChange={updateImage}
         />
+        </label>
         <label id="description-label">
           Description:
         </label>
@@ -83,7 +84,7 @@ function AddPhotoForm({ setShowModal }) {
           onChange={(e) => setDescription(e.target.value)}
         />
         <div id="submit-btn-div">
-          <button className="btn-rnb" id="submit-button" type="submit">Add Photo</button>
+          <button className="submit-photo-button" id="submit-button" type="submit">Add Photo</button>
         </div>
       </form>
     </>

@@ -14,7 +14,7 @@ function AddAlbumForm({ setShowModal }) {
     e.preventDefault();
     await dispatch(addSingleAlbum(title, user_id))
       .then((res) => {
-      
+
         if (!res?.ok) {
           setErrors(res?.errors)
         } else {
@@ -45,7 +45,7 @@ function AddAlbumForm({ setShowModal }) {
           onChange={(e) => setTitle(e.target.value)}
         />
         <div id="submit-btn-div">
-          <button className="btn-rnb" id="submit-button" type="submit">Add Album</button>
+          <button className="submit-album-button" id="submit-button" type="submit">Add Album</button>
         </div>
       </form>
     </>
