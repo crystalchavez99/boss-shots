@@ -15,6 +15,7 @@ import DisplayAlbums from './components/DisplayAlbums/DisplayAlbums';
 import AllTaggedPhotos from './components/AllTaggedPhotos/AllTaggedPhotos';
 import DeadEnd from './components/404Page/DeadEnd';
 import SplashPage from './components/SplashPage/SplashPage';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -34,6 +35,7 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar />
+      
       <Switch>
         <Route path='/login' exact={true}>
           <LoginForm />
@@ -69,6 +71,7 @@ function App() {
           <DeadEnd/>
         </Route>
       </Switch>
+
     </BrowserRouter>
   );
 }

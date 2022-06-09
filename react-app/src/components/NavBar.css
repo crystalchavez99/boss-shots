@@ -10,7 +10,8 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     list-style-type: none;
-    padding: 15px;
+    align-items: center;
+    padding: .5rem;
     background: rgba(0,0,0,.25);
 }
 
@@ -40,7 +41,7 @@ nav{
 
 .login_sign_up_div {
     display: flex;
-
+    font-weight: 700;
     width: 150px;
     justify-content: space-between;
 }
@@ -50,4 +51,8 @@ nav{
 }
 #user-action li{
     margin-right: 1rem;
+}
+
+#home-tab{
+    font-weight: 700;
 }

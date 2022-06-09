@@ -4,15 +4,16 @@
   margin-bottom: 15px;
 }
 #splash-page{
-  display: flex;
-    justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 #splash-main-div {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 50px;
 }
 
 #splash-slogan {

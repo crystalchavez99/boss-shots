@@ -37,13 +37,17 @@
         background-position: 10vw;
     }
 }
-
+html,body{
+    width: 100%;
+  height: 100vh;
+}
 body {
     color: white;
     background-color: rgb(33, 33, 36);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin:0;
     padding: 0;
+
 }
 
 .footer {
@@ -74,4 +78,8 @@ body {
 
 #footer a{
     text-decoration: none;
+}
+
+#root{
+    min-height: 100%
 }
