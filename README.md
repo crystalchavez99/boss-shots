@@ -4,7 +4,7 @@ This site is your community for sharing images of your epic boss battles from al
 <img src="https://res.cloudinary.com/dreambssd/image/upload/v1653500499/BOSS_k1uqas.png"/>
 
 ## Live Link
-https://boss-shots.herokuapp.com/login
+https://bossshots.herokuapp.com/login
 
 ## Wiki
 <a href="https://github.com/zavadev/boss-shots/wiki">Boss-Shots Wiki</a>
