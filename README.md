@@ -1,10 +1,11 @@
 # Welcome to BossShots!
 This site is your community for sharing images of your epic boss battles from all your favorite video games. Check out the bosses others are currently fighting in your main feed, save the best ones to albums, and categorize them all by tags. Hit the live link below to get started!
 
-<img src="https://res.cloudinary.com/dreambssd/image/upload/v1653500499/BOSS_k1uqas.png"/>
+<img src="https://res.cloudinary.com/dreambssd/image/upload/v1654873414/Capture_g9gsyd.png"/>
+<img src="https://res.cloudinary.com/dreambssd/image/upload/v1654873491/Capture_gov79q.png"/>
 
 ## Live Link
-https://bossshots.herokuapp.com/login
+https://bossshots.herokuapp.com/
 
 ## Wiki
 <a href="https://github.com/zavadev/boss-shots/wiki">Boss-Shots Wiki</a>
@@ -14,7 +15,7 @@ https://bossshots.herokuapp.com/login
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg" width=50px height=50px/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original-wordmark.svg" width=50px height=50px/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-plain-wordmark.svg" width=50px height=50px/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" width=50px height=50px/>
 
 ## Features
-<img src="https://res.cloudinary.com/dreambssd/image/upload/v1654028578/Capture_fbn30w.png"/>
+<img src="https://res.cloudinary.com/dreambssd/image/upload/v1654873533/Capture_sjsjtu.png"/>
 
 **<h3>Photos</h3>**
 * Users can view photos and post photos on Boss-Shots.
@@ -23,11 +24,12 @@ https://bossshots.herokuapp.com/login
 **<h3>Albums</h3>**
 * Users can view and create albums, which can add photos to that album.
 * Users that created the album can edit and delete.
+<img src="https://res.cloudinary.com/dreambssd/image/upload/v1654873665/Capture_zwskqb.png"/>
 
 **<h3>Comments</h3>**
 * Users can view the comments of a photos and post a comment.
 * Users can only delete their own comment.
-
+<img src="https://res.cloudinary.com/dreambssd/image/upload/v1654873727/Capture_azfwxy.png"/>
 **<h3>Tags</h3>**
 * Users can view the tags for each photo corresponding to it.
 * Users can create a tag and add it to any photo.
